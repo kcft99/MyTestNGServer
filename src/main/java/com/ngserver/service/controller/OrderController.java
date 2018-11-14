@@ -32,6 +32,7 @@ public class OrderController {
 	}
 
 	@PostMapping("/addOrder")
+	@CrossOrigin
 	public int addOrder(@RequestBody JSONObject inOrder) {
 		System.out.println(inOrder.toString());
 
