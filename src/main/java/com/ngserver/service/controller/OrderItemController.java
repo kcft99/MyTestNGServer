@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.ngserver.service.orderItem.Order;
 import com.ngserver.service.orderItem.OrderItem;
 import com.ngserver.service.repository.OrderItemRepository;
+import org.springframework.web.bind.annotation.CrossOrigin;
+
 
 @RestController
 public class OrderItemController {
@@ -21,6 +23,7 @@ public class OrderItemController {
 	}
 	
 	@GetMapping("/getOrderItems")
+	@CrossOrigin
 	public List<OrderItem> getOrderItems() {
 		List<OrderItem> orderItemList = orderItemRepository.findAll();
 		return orderItemList;
